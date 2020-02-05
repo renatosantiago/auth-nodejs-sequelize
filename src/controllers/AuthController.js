@@ -16,7 +16,7 @@ module.exports = {
         return response.status(400).send("Email ou senha incorreto");
       }
   
-      return response.header('auth-token', token).send({token: token});
+      return response.header('auth-token', token).send({access_token: token});
 
     } catch (error) {
       return response.send(error);
