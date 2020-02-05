@@ -6,8 +6,8 @@ Este pequeno projeto serve como um fabrica de autenticação, após feito o logi
 ```
 {
   "id": 1,
-  "nome": "Renato Santiago",
-  "email": "renatorsanti@gmail.com",
+  "nome": "Nome Usuário",
+  "email": "email_usuario@gmail.com",
   "permitions": [
     {
       "id": 4,
