@@ -1,6 +1,9 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const AuthDao = require('../database/dao/AuthDAO');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = {
   
@@ -21,7 +24,7 @@ module.exports = {
       nome: user.name,
       email: user.email,
       permitions: user.permitions
-    }, 'token_secret');
+    }, process.env.TOKEN_SECRET);
 
     return token;
   }
