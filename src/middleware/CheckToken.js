@@ -11,6 +11,6 @@ module.exports = function(request, response, next) {
     request.check_token = verified;
     next();
   } catch (error) {
-    response.status(400).send('Invalid token');
+    response.status(400).send(error);
   }
 }

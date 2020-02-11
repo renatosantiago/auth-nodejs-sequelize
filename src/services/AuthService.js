@@ -23,7 +23,8 @@ module.exports = {
       id: user.id,
       nome: user.name,
       email: user.email,
-      permitions: user.permitions
+      permitions: user.permitions,
+      exp: Math.floor(Date.now() / 1000) + (60 * 60)
     }, process.env.TOKEN_SECRET);
 
     return token;
