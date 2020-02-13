@@ -3,13 +3,13 @@ const checkToken = require('./middleware/CheckToken')
 
 const UserController = require('./controllers/UserController');
 const AuthController = require('./controllers/AuthController');
-const PermitionController = require('./controllers/PermitionController');
+const PermissionController = require('./controllers/PermissionController');
 
 const routes = express.Router();
 
 routes.get('/users', checkToken, UserController.index);
 routes.post('/users', checkToken, UserController.store);
 routes.post('/users/login', AuthController.login);
-routes.post('/permitions', checkToken, PermitionController.store);
+routes.post('/permissions', checkToken, PermissionController.store);
 
 module.exports = routes;

@@ -14,7 +14,7 @@ class User extends Model {
   }
 
   static associate(models) {
-    this.belongsToMany(models.Permition, { foreignKey: 'id_user', through: 'user_permition', as: 'permitions' });
+    this.belongsToMany(models.Permission, { foreignKey: 'id_user', through: 'user_permission', as: 'permissions' });
   }
 }
 

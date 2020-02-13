@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('user_permition', {
+    return queryInterface.createTable('user_permission', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -16,9 +16,9 @@ module.exports = {
         onDelete: 'cascade',
         type: Sequelize.INTEGER
       },
-      id_permition: {
+      id_permission: {
         allowNull: false,
-        references: {model: 'permition', key: 'id'},
+        references: {model: 'permission', key: 'id'},
         onUpdate: 'cascade',
         onDelete: 'cascade',
         type: Sequelize.INTEGER

@@ -1,5 +1,5 @@
 const User = require('../../models/User');
-const Permition = require('../../models/Permition');
+const Permission = require('../../models/Permission');
 
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
         email: user.email 
       },      
       include: { 
-        association: 'permitions',
+        association: 'permissions',
         attributes: ['id', 'name'],
         required: false,
         through: {
@@ -27,15 +27,15 @@ module.exports = {
     // });
     // _user = _user[0];
 
-    // let permitions = await Permition.sequelize.query(
-    //   "select p.id, p.name from permition p" + 
-    //   " join user_permition pv on pv.id_permition = p.id" +
+    // let permissions = await Permission.sequelize.query(
+    //   "select p.id, p.name from permission p" + 
+    //   " join user_permission pv on pv.id_permission = p.id" +
     //   " where pv.id_user = :id", {
     //   replacements: { id: _user.id},
-    //   type: Permition.sequelize.QueryTypes.SELECT
+    //   type: Permission.sequelize.QueryTypes.SELECT
     // });
 
-    // _user.permitions = permitions;
+    // _user.permissions = permissions;
 
     // return _user;
    
