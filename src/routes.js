@@ -8,6 +8,7 @@ const PermissionController = require('./controllers/PermissionController');
 const routes = express.Router();
 
 routes.get('/users', checkToken, UserController.index);
+routes.get('/users/name', checkToken, UserController.listUserByName);
 routes.post('/users', checkToken, UserController.store);
 routes.post('/users/login', AuthController.login);
 routes.post('/permissions', checkToken, PermissionController.store);

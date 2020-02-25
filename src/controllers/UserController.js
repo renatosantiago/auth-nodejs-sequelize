@@ -1,4 +1,6 @@
 const User = require('../models/User');
+const USerService = require('../services/UserService');
+
 const bcrypt = require('bcryptjs');
 
 
@@ -23,6 +25,19 @@ module.exports = {
       return response.status(400).send(error);
     }
   
+  },
+
+  async listUserByName(request, response) {
+
+    const param = request.query;
+
+    if(param){
+      const result = await USerService.listUserByName(param);
+      return response.status(200).json(result);
+    }
+
+    return response.status(204).json({});
+
   }
 
 }
