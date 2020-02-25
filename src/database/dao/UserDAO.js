@@ -1,6 +1,6 @@
-const { Op } = require("sequelize");
 const User = require('../../models/User');
-const Permission = require('../../models/Permission');
+// const Permission = require('../../models/Permission');
+// const { Op } = require("sequelize");
 
 
 module.exports = {
@@ -22,7 +22,7 @@ module.exports = {
     return result;
     
     /* abaixo segue exemplo em raw query */
-    
+
     // let _user = await User.sequelize.query(
     //   "select u.id, u.name, u.email, u.password from user u where u.email = :email", {
     //   replacements: { email: user.email},           

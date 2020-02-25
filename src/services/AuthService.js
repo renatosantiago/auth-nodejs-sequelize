@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const AuthDao = require('../database/dao/AuthDAO');
+const UserDAO = require('../database/dao/UserDAO');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -8,7 +8,7 @@ dotenv.config();
 module.exports = {
   
   async login(data) {    
-    const user = await AuthDao.findUserByEmail(data);
+    const user = await UserDAO.findUserByEmail(data);
     
     if(!user){
       return;
